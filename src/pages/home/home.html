@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-img [src]="(banner | async)?.url" width="100%" height="160px"></ion-img>
+
+  <ion-card *ngFor="let user of users | async">
+
+    <ion-item text-wrap>
+      <h2>{{user.twitter}}</h2>
+    </ion-item>
+
+  </ion-card> 
+</ion-content>
